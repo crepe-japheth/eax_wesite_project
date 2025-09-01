@@ -1,0 +1,66 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block main-container %}
+            <section class="page-title page-title-4 image-bg overlay parallax">
+                <div class="background-image-holder">
+                    <img alt="Background Image" class="background-image" src="{% static 'img/home15.jpg' %}" />
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="mb0">Trading Schedules</h3>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <ol class="breadcrumb breadcrumb-2">
+                                <li><a href="https://www.ea-africaexchange.com/"> Home</a></li> <li> <a href='../market-data.html'> Market Data</a> </li><li> <a href='trading-schedules.html'> Trading Schedules </a> </li>                            </ol>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row v-align-children">
+                         <div class="col-md-12"> 
+                            <h4> EAX Daily trading schedule</h4>
+                            <table class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Day of the Week</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Trading Time</th>
+                                        <td>Spot Trading <br />9:00AM to 12:00PM <br /> <br /> Auction Trading <br />9:00AM</td>
+                                        <td>Spot Trading <br />9:00AM to 12:00PM</td>
+                                        <td>Spot Trading <br />9:00AM to 12:00PM</td>
+                                        <td>Spot Trading <br />9:00AM to 12:00PM</td>
+                                        <td>Spot Trading <br />9:00AM to 12:00PM
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>                                             
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+
+            <section class="block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                        
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% endblock main-container %}

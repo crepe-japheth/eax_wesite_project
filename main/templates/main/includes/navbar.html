@@ -1,0 +1,102 @@
+        {% load static %}
+        <div class="nav-container">
+            <a id="top"></a>
+            <nav class="nav-container">
+                <div class="nav-bar">
+                    <div class="module left">
+                       <a href="{% url 'index' %}">
+                            <img class="logo logo-light" width="150" alt="EAX" src="{% static 'img/eax-logo.png' %}" /> 
+                            <img class="logo logo-dark" width="150" alt="EAX" src="{% static 'img/eax-logo.png' %}" />
+                        </a>
+                    </div>
+                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                        <i class="ti-menu"></i>
+                    </div>
+                    <div class="module-group right">
+                        <div class="module left">
+                            <ul class="menu">
+							     <li>
+									<a href="{% url 'index' %}"  title=""><i class="fa"></i>HOME</a>
+								</li>
+								<li class="has-dropdown">
+                                    <a href="{% url 'about' %}" title="WHO WE ARE"><i class="fa"></i>WHO WE ARE</a>
+									<ul>
+									    <li><a href="{% url 'about' %}" title="ABOUT US">ABOUT US</i></a></li>
+										<li><a href="{% url 'company-profile' %}" title="COMPANY PROFILE">COMPANY PROFILE</i></a></li>
+                    					<li><a href="{% url 'board' %}" title="BOARD OF DIRECTORS">BOARD OF DIRECTORS</i></a></li>
+                    					<li><a href="{% url 'eax-management-team' %}" title="MANAGEMENT TEAM">MANAGEMENT TEAM</i></a></li>
+                    					<li><a href="{% url 'partners' %}" title="PARTNERS">PARTNERS</i></a></li>
+                    					<li><a href="{% url 'faq' %}" title="FAQ">FAQ</i></a></li>
+                    				</ul>
+								</li>
+								<li class="has-dropdown">
+                                    <a href="{% url 'our-services' %}" title="WHAT WE DO"><i class="fa"></i> WHAT WE DO</a>
+                                    <ul class="mega-menu">
+                                        <li>
+                                            <ul>
+                                                <li><span class="title"> Access to Market</span></li>
+                                                <li><a href="{% url 'our-services' %}" title="LINKING BUYERS AND SELLERS">LINKING BUYERS AND SELLERS</i></a></li>
+                                                <li><a href="{% url 'regional-trade' %}" title="REGIONAL TRADING">REGIONAL TRADING</i></a></li>
+                                                 <li><a href="{% url 'commodity-trading-models' %}" title="COMMODITY TRADING MODELS">COMMODITY TRADING MODELS</i></a></li>
+												<li><a href="{% url 'trade-settlement' %}" title="OUR SERVICES">TRADE SETTLEMENT</i></a></li>
+												<li><a href="{% url 'membership-application-process' %}" title="APPLICATION PROCESS">MEMBERSHIPS</i></a></li>
+                                             </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li><span class="title">Secure Storage</span></li>
+                                                <li><a href="{% url 'warehouse-services-and-facilities' %}" title="WAREHOUSE SERVICES AND FACILITIES">WAREHOUSE SERVICES AND FACILITIES</i></a></li>
+                                                <li><a href="{% url 'collateral-management-services' %}" title="COLLATERAL MANAGEMENT SERVICES">COLLATERAL MANAGEMENT SERVICES</i></a></li>
+												<li><a href="{% url 'commodities-grading' %}" title="COMMODITIES GRADING">COMMODITIES GRADING</i></a></li>
+                                           </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li><span class="title">Access to Finance </span></li>
+                                                <li><a href="{% url 'electronic-warehouse-receipt' %}" title="ELECTRONIC WAREHOUSE  RECIEPT FINANCING">ELECTRONIC WAREHOUSE  RECIEPT FINANCING</i></a></li>
+                                                <li><a href="{% url 'risk-management' %}" title="RISK MANAGEMENT">RISK MANAGEMENT</i></a></li>
+											</ul>
+                                        </li>
+										<li>
+                                            <ul>
+                                                <li>
+                                                    <span class="title">Market Information </span>
+                                                </li>
+                                                <li><a href="{% url 'market-data' %}" title="RELIABLE PRICES AND MARKET DATA REPORTS">RELIABLE PRICES AND MARKET DATA REPORTS</i></a></li>
+											</ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="has-dropdown"><a href="{% url 'market-data' %}" title="MARKET DATA"><i class="fa"></i>MARKET DATA</a>
+                    				<ul>
+                    					<li><a href="{% url 'current-prices' %}" title="CURRENT PRICES">CURRENT PRICES</i></a></li>
+										<li><a href="{% url 'trading-schedules' %}" title="TRADING SCHEDULES">TRADING SCHEDULES</i></a></li>
+										<li><a href="https://eax.co.rw/login" title="EWRS MEMBER LOGIN">MEMBER LOGIN</i></a></li>
+                    				</ul>
+								</li>
+								<li class="has-dropdown"><a href="pages/commodities" title="COMMODITIES"><i class="fa"></i> COMMODITIES</a>
+                    				<ul>
+                    					<li><a href="{% url 'white-maize' %}" title="WHITE MAIZE">WHITE MAIZE</i></a></li>
+										<li><a href="{% url 'mixed-beans' %}" title="MIXED BEANS">MIXED BEANS</i></a></li>
+                    					<li><a href="{% url 'soya' %}" title="SOYA">SOYA</i></a></li>
+                    					<li><a href="{% url 'wheat' %}" title="WHEAT">WHEAT</i></a></li>
+                    					<li><a href="{% url 'sorghum' %}" title="SORGHUM">SORGHUM</i></a></li>
+                    					<li><a href="{% url 'paddy-rice' %}" title="PADDY RICE">PADDY RICE</i></a></li>
+                    				</ul>
+								</li>
+								<li><a href="{% url 'contact-us' %}" title="CONTACT US"><i class="fa"></i> CONTACT US</a></li>                           
+                                       <li>
+				 							<a href="{% url 'news' %}"  title=""><i class="fa"></i>MEDIA UPDATES</a>
+										</li>
+                                
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of module group-->
+                </div>
+            </nav>
+        </div>
+        

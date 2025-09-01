@@ -1,0 +1,164 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block main-container %}
+<section class="cover fullscreen image-slider slider-all-controls controls-inside parallax">
+            <ul class="slides">
+                <li class="image-bg pt-xs-240 pb-xs-240">
+                    <div class="background-image-holder">
+                        <img alt="image" class="background-image" src="{% static 'img/agency1.jpg' %}" />
+                    </div>
+                        <div class="container v-align-transform">
+                        <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1">
+                                <h2 class="mb50 mb-xs-16 large">Linking Smallholder Farmers to </br/> Global Markets</h2>
+                                
+                                <h5>
+                                    Our vision is to create lasting institutions that will catalyze Africa's agricultural potential, support African farmers to achieve food security, energy security, and improve Africa's overall global trade competitiveness.
+                                </h5>
+                                <a class="btn btn-lg btn-filled" href="{% url 'about' %}">Learn More</a>
+                            </div>
+                        </div>
+                        <!--end of row-->
+                    </div>
+                    
+                    
+                </li>
+                <li class="image-bg pt-xs-240 pb-xs-240">
+                    <div class="background-image-holder">
+                            <img alt="image" class="background-image" src="{% static 'img/agency2.jpg' %}" /> 
+                    </div>
+                    <div class="container v-align-transform">
+                        <div class="row">
+                            <div class="col-sm-offset-1 text-center col-sm-10">
+                                <h2 class="mb20 mb-xs-16 large">Connecting Markets <br/>Growing Trade</h2>
+                                <h5>EAX offers participants of the physical commodities markets, such as agricultural / mineral producers and traders an excellent opportunity to trade their products locally, regionally and on the international markets.</h5>
+                                    <a class="btn btn-lg btn-filled" href="{% url 'our-services' %}">Learn More</a>
+                            </div>
+                        </div>
+                        <!--end of row-->
+                    </div>
+                    <!--end of container-->
+                </li>
+                
+            </ul>
+        </section>
+               
+        <section class="image-square left">
+            <div class="col-md-6 feature feature-3 background-dark-gray">
+                <div class="fullwidth">
+                    <h5>Become an EAX Member, gain access to commodities market information in Rwanda East Africa Community</h5>
+                    <p class="greatsize">
+                        The East Africa Exchange (EAX) is a regional commodity exchange legally registered throughout East Africa Community (EAC) partner states and is currently established with a head office in Kigali Rwanda. EAX offers participants of the physical commodities markets, such as agricultural / mineral producers and traders an excellent opportunity to trade their products locally, regionally and on the international markets.
+                    </p>
+                    
+                </div>
+                <div class="col-sm-12 text-center">
+                        <a class="btn btn-filled roundboutton" href="https://adminwork.eax.rw/authentication/register">Sign Up Today</a>
+                </div>
+                
+                        <!--end of feature-->
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 image-tile hover-tile text-center small-box"> 
+                            <img alt="Pic" src="{% static 'img/quality-grading.jpg' %}" />
+                            <div class="hover-state">
+                                <a href="pages/our-services/commodities-grading">
+                                <h3 class="mb8">Commodities Grading</h3>
+                                <h6 class="">Quality Assurance</h6>
+                                </a>
+                            </div>
+                    </div>
+                    <div class="col-md-6 small-box-red"> 
+                            <div class="col-sm-12 text-center">
+                                <img alt="Pic" src="{% static 'img/grains-icon.png' %}" />
+                            </div>
+                            <div class="fullwidth">
+                                <p class="greatsize-mt10">
+                                    We link producers and consumers of commodities with a system that supports fair exchange of value &amp; create a trust economy.
+                                </p>
+                            </div>
+                        </div>
+                    <div class="col-md-6 small-box-white"> 
+                            <div class="col-sm-12 text-center">
+                                <img alt="Pic" src="{% static 'img/farmer-icon.png' %}" />
+                            </div>
+                            <div class="fullwidth">
+                                <p class="greatsize-mt10-font-darker">
+                                    With small-holder famers at the center, we unlock a world of value-addition services that improve farmers livelihoods.
+                                </p>
+                            </div>
+                    </div>
+                    <div class="col-md-6 image-tile hover-tile text-center small-box"> 
+                            <img alt="Pic" src="{% static 'img/silo-in-bugesera.jpg' %}" />
+                            <div class="hover-state">
+                                <a href="pages/our-services/warehouse-services-and-facilities">
+                                <h3 class="mb8">World class storages</h3>
+                                <h6 class="">Silos and Warehouses</h6>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-square right bg-secondary">
+            
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 image-tile hover-tile text-center small-box"> 
+                            <img alt="Pic" src="{% static 'img/warehouse-receipts.jpg' %}" />
+                            <div class="hover-state">
+                                <a href="pages/our-services/commodities-grading">
+                                <h3 class="mb8">Warehouse Receipts</h3>
+                                <h6 class="">EAX Electronic Warehouse Receipt Program</h6>
+                                </a>
+                            </div>
+                    </div>
+                    <div class="col-md-6 small-box-red"> 
+                            <div class="col-sm-12 text-center">
+                                <img alt="Pic" src="{% static 'img/mobilephone-icon.png' %}" />
+                            </div>
+                            <div class="fullwidth">
+                                <p class="greatsize-mt10">
+                                    Our trade is based on electronic warehouse receipt. This is an online record representation of physically stored goods at any EAX certified warehouse. 
+                                </p>
+                            </div>
+                        </div>
+                    <div class="col-md-6 small-box-white"> 
+                            <div class="col-sm-12 text-center">
+                                <img alt="Pic" src="{% static 'img/silo-icon.png' %}" />
+                            </div>
+                            <div class="fullwidth">
+                                <p class="greatsize-mt10-font-darker">
+                                    High standard services of storage facilities such as grading, drying, weighing, fumigation, cleaning, sorting and re-bagging are offered 
+                                </p>
+                            </div>
+                    </div>
+                    <div class="col-md-6 image-tile hover-tile text-center small-box"> 
+                            <img alt="Pic" src="{% static 'img/drying-services.jpg' %}" />
+                            <div class="hover-state">
+                                <a href="pages/our-services/warehouse-services-and-facilities">
+                                <h3 class="mb8">Collateral Management Services</h3>
+                                <h6 class="">High Standard Services at our Storage Facilities</h6>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 feature feature-3 background-dark-white">
+                        <div class="fullwidth">
+                                    <h4>Join a Modern Marketplace</h4>
+                                    <p class="greatsize-font-darker">
+                                        The Exchange brings a modern and efficient marketplace to allow spot, forward and 
+                                    futures contracts trading in agricultural, minerals and metal spaces. EAX's focus in the Agriculture sector and has therefore established full services of exchange market in maize, beans, soya, wheat, paddy rice and sorghum.
+                                    </p>
+                        </div>
+                        <div class="col-sm-12 text-center">
+                                <a class="btn btn-filled roundboutton" href="pages/about-us/company-profile">Learn More</a>
+                        </div>
+    
+            </div>
+            
+        </section>
+{% endblock main-container %}

@@ -1,0 +1,89 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block main-container %}
+    <section class="page-title page-title-4 image-bg overlay parallax">
+        <div class="background-image-holder">
+            <img alt="Background Image" class="background-image" src="{% static 'img/home15.jpg' %}" />
+        </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3 class="mb0">Media Updates</h3>
+					
+				</div>
+				<div class="col-md-6 text-right">
+					<ol class="breadcrumb breadcrumb-2">
+						<li>
+                            <a href="{% url 'index' %}"> Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'news' %}"> Media Updates</a>
+                        </li>
+                        <li>
+                            <a href='#'> Market Data</a>
+                        </li>
+                        <li>
+                            <a href='#'>post</a>
+                        </li>					
+                    </ol>
+				</div>
+			</div>
+			<!--end of row-->
+		</div>
+		<!--end of container-->
+	</section>
+    <section>
+       <div class="container">
+            <div class="row">
+                <div class="col-md-9 mb-xs-24">
+                    <div class="widget">
+                        <h6 class="title">Category:{{post.category}}</h6>
+                        <hr>
+			        </div>
+                    <div class="post-snippet mb64">
+                        <img class="mb24" src="{{ post.thumbnail.url }}" alt="{{ post.title }}"/>
+                                                                    
+                            <div class="post-title">
+                                <h4 class="mb0">{{ post.title }}</h4>
+                            </div>
+                            <ul class="post-meta">
+                                <li>
+                                    <i class="ti-user"></i>
+                                    <span> Published By: <a href="#">{{ post.published_by }}</a>
+                                        
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="ti-tag"></i>
+                                    <span>Tagged :
+                                        {% for tag in post.tags.all %} 
+                                        <a href="#">{{ tag.name }} </a>
+                                        {% endfor %}
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="ti-time"></i>
+                                    <span>on
+                                        <a href="#">{{ post.date_published }}</a>
+                                    </span>
+                                </li>
+                            </ul>
+                            <hr>
+                            {{ post.content|safe }}
+                            <!--end of post snippet-->
+                        <hr>
+                        
+                    </div>
+                </div>
+                <!--end of nine col-->
+                <div class="col-md-3 hidden-sm">
+                    
+                    {% include "main/includes/sidebar.html" %}
+                </div>               <!--end of widget-->
+                        <!--end of sidebar-->
+            </div>
+                    <!--end of container row-->
+        </div>
+                <!--end of container-->
+    </section>
+{% endblock main-container %}

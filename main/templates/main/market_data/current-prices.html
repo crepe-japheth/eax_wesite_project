@@ -1,0 +1,105 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block main-container %}
+            <section class="page-title page-title-4 image-bg overlay parallax">
+                <div class="background-image-holder">
+                    <img alt="Background Image" class="background-image" src="{% static 'img/home15.jpg' %}" />
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="mb0">Current Prices</h3>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <ol class="breadcrumb breadcrumb-2">
+                                <li><a href="https://www.ea-africaexchange.com/"> Home</a></li> <li> <a href='../market-data.html'> Market Data</a> </li><li> <a href='current-prices.html'> Current Prices </a> </li>                            
+                            </ol>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row v-align-children">
+                         
+                         <div class="col-md-12">                       
+                            <!--  in case the page is for market prices listing  -->
+                            <div class="tabbed-content button-tabs">
+                                <ul class="tabs thirds">
+                                    <li class="active">
+                                        <div class="tab-title">
+                                            <span>Today's Market Prices</span>
+                                        </div>
+                                        <div class="tab-content text-left">
+                                            <div>
+                                                <div class="overflow-hidden">
+                                                   <div class="pull-left p0 p0-xs pt0">
+                                                        <h4>Thursday 17 July 2025</h4>
+                                                    </div>
+                                                </div>
+                                                <h6 class="uppercase mb8 number">White Maize</h6>
+                                    			<div class="col-md-3 col-sm-0">
+                                                    <p class="lead mb0">Grade 1: 520RWF 
+                                                        <img src="{% static 'images/price-up.png' %}" />10
+                                                    </p>
+                                                </div>
+                                    			<div class="col-md-3 col-sm-0">
+                                                    <p class="lead mb0">Grade 2: 515RWF 
+                                                        <img src="{% static 'images/price-up.png' %}" />5
+                                                    </p>
+                                                </div>
+                                    			<div class="col-md-3 col-sm-0">
+                                                    <p class="lead mb0">Grade 3: 500RWF 
+                                                        <img src="{% static 'images/price-up.png' %}" />10
+                                                    </p>
+                                                </div>
+                                    			<div class="col-md-3 col-sm-0">
+                                                    <p class="lead mb0">Grade 4: 495RWF 
+                                                        <img src="{% static 'images/price-up.png' %}" />5
+                                                    </p>
+                                                </div>
+                                    			<hr class="mt40 mb40 mt-xs-0 mb-xs-24">
+                                                <h6 class="uppercase mb8 number">Mixed Beans</h6>
+                                                <div class="col-md-3 col-sm-0">
+                                                    <p class="lead mb0">Grade 1: 730RWF 
+                                                        <img src="{% static 'images/price-down.png' %}" />10
+                                                    </p>
+                                                </div>
+                                    			<div class="col-md-3 col-sm-0">
+                                                    <p class="lead mb0">Grade 2: 720RWF <img src="{% static 'images/price-down.png' %}" />2</p>
+                                                </div>
+                                    			<div class="col-md-3 col-sm-0">
+                                                    <p class="lead mb0">Grade 3: 710RWF <img src="{% static 'images/price-down.png' %}" />1</p>
+                                                </div>
+                                    			<div class="col-md-3 col-sm-0">
+                                                    <p class="lead mb0">Grade 4: 700RWF <img src="{% static 'images/price-down.png' %}" />1</p>
+                                                </div>
+                                                <hr class="mt40 mb40 mt-xs-0 mb-xs-24">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+									
+                                   
+                                </ul>
+                            </div>
+                            <!--  end market price listing-->             
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+
+            <section class="block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% endblock main-container %}
+

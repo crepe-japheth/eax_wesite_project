@@ -1,0 +1,19 @@
+<div class="widget">
+    <h6 class="title">Media Categories</h6>
+    <hr>
+    
+    <ul>
+        {% for cat in categories %}    
+        <li>
+            <a href="{% url 'blog_by_category' cat.id %}" title="{{ cat.name }}">{{ cat.name }}</a>
+        </li> 
+        {% endfor %}      
+    </ul>
+</div>
+
+<div class="widget">
+    <h6 class="title">Latest Updates On Twitter</h6>
+    <hr>
+    <ul class="twitter-feed"><li><span class="status">Our twitter feed is unavailable right now.</span> <span class="meta"><a href="http://twitter.com/EAX_Exchange">Follow us on Twitter</a></span></li></ul>				
+</div>
+<!--end of widget-->

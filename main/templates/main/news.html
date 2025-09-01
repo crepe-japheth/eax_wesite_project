@@ -1,0 +1,83 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block main-container %}
+	<section class="page-title page-title-4 image-bg overlay parallax">
+                <div class="background-image-holder">
+                    <img alt="Background Image" class="background-image" src="{% static 'img/home15.jpg' %}" />
+                </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3 class="mb0">Media Updates</h3>
+					
+				</div>
+				<div class="col-md-6 text-right">
+					<ol class="breadcrumb breadcrumb-2">
+						<li><a href="index.html"> Home</a></li><li><a href='news.html'> Media Updates</a></li><li><a href='news/index.html'> All Categories</a></li>					</ol>
+				</div>
+			</div>
+			<!--end of row-->
+		</div>
+		<!--end of container-->
+	</section>
+	<section class="bg-secondary">
+		<div class="container">
+			<div class="col-md-9">
+				<div class="widget">
+				<h6 class="title">Category: All  Categories 			 </h6>
+				<hr>
+				</div>
+				
+					<div class="row masonry-loader">
+						<div class="col-sm-12 text-center">
+							<div class="spinner"></div>
+						</div>
+					</div>
+					<div class="row masonry masonryFlyIn mb40">
+					{% for post in posts %}
+						<div class="col-sm-6 post-snippet masonry-item">
+							<a href="{% url 'blog_detail' post.pk %}">
+							<img src="{{ post.thumbnail.url }}" border="0" alt="{{ post.title }}"/>
+							</a>
+							<div class="inner">
+								<a href="{% url 'blog_detail' post.pk %}" title="{{post.title}}">
+									<h5 class="mb0">{{ post.title }}</h5> 
+									<span class="inline-block mb16">Rwanda</strong>. {{ post.date_published }} | {{ post.published_by }}</span>
+								</a>
+								<hr>
+								<p>{{ post.content|truncatewords:30|safe }}</p>
+								<a class="btn btn-sm" href="{% url 'blog_detail' post.pk %}" title="{{ post.title }}">Read More</a>
+
+								
+							</div>
+						</div>
+						{% empty %}
+							<p>No posts available in this category.</p>
+						<!--end of snippet-->
+					{% endfor %}
+					</div>
+					<!--end of row-->
+					<div class="row">
+						<ol class="breadcrumb breadcrumb-3">
+						<li>1 to 5 of 33 Articles.</li>
+						</ol>
+						<div class="text-center">
+						
+							<ul class="pagination">
+								
+								<li><a href=news/page/1/index.html aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li><li class='active'><a href=news/page/1.html >1</a> <li><a href=news/page/2.html>2</a></li><li><a href=news/page/3.html>3</a></li><li><a href=news/page/4.html>4</a></li><li><a href=news/page/5.html>5</a></li><li><a href=news/page/6.html>6</a></li> <li ><a href=news/page/7.html >7</a><li><a href=news/page/2/index.html aria-label='Next'> <span aria-hidden='true'>&raquo;</span> </a></li> 
+							</ul>
+						</div>
+					</div>
+					<!--end of row-->
+				</div>
+			<!--end of 9 col-->
+			<div class="col-md-3 hidden-sm">
+				{% include "main/includes/sidebar.html" %}
+			</div>
+			<!--end of sidebar-->
+		</div>
+		<!--end of container-->
+	</section>
+
+{% endblock main-container %}
