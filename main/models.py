@@ -7,6 +7,9 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name_plural = "Blog Categories"
 
 
 class Tag(models.Model):
@@ -14,6 +17,9 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name_plural = "Blog Tags"
 
 
 class BlogPost(models.Model):
@@ -27,6 +33,27 @@ class BlogPost(models.Model):
 
     class Meta:
         ordering = ['-date_published']
+        verbose_name_plural = "Blog Posts"
 
     def __str__(self):
         return self.title
+
+
+class Partner(models.Model):
+    name = models.CharField(max_length=200)
+    full_name = models.CharField(max_length=300, blank=True, null=True)
+    description = models.TextField()
+    website = models.URLField(blank=True, null=True)
+    logo = models.ImageField(upload_to='partners/logos/', blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+    
+class ManagementTeamMember(models.Model):
+    name = models.CharField(max_length=200)
+    position = models.CharField(max_length=200)
+    bio = models.TextField()
+    photo = models.ImageField(upload_to='management_team/photos/', blank=True, null=True)
+
+    def __str__(self):
+        return self.name

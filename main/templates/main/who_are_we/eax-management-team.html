@@ -49,89 +49,26 @@
                         <div class="inner-left">
                             <div class="our-team-sec">
                                 <div class="row">
-                                                            
+                                    {% for team_member in team_members %}                        
                                     <div class="col-md-3">
                                         <div class="our-team-box">
                                             <div class="team-title">
                                                 <img
-                                                    src="{% static 'resources/pages/clement-kayitakire.jpg' %}"
+                                                    src="{{ team_member.photo.url }}"
                                                     alt="" />
                                                 <h3>
-                                                    <a href="https://www.ea-africaexchange.com/sections/clement-kayitakire-" title="Clement Kayitakire ">Clement Kayitakire </a>
+                                                    <a href="{% url 'management_detail' team_member.id %}">{{team_member.name}} </a>
                                                 </h3>
 
                                             </div>
                                             <ul>
                                                 <li>
-                                                    Ag.Chief Executive  Officer		
+                                                    {{team_member.position}}		
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    
-                                    
-                                                            
-                                    <div class="col-md-3">
-                                        <div class="our-team-box">
-                                            <div class="team-title">
-                                                <img
-                                                    src="{% static 'resources/pages/innocent-niyonshuti.jpg' %}"
-                                                    alt="" />
-                                                <h3>
-                                                    <a href="https://www.ea-africaexchange.com/sections/innocent-niyonshuti-" title="Innocent Niyonshuti ">Innocent Niyonshuti </a>
-                                                </h3>
-
-                                            </div>
-                                            <ul>
-                                                <li>
-                                                    Chief Finance Officer
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                                            
-                                    <div class="col-md-3">
-                                        <div class="our-team-box">
-                                            <div class="team-title">
-                                                <img
-                                                    src="{% static 'resources/pages/harriet-mutoni.jpg' %}"
-                                                    alt="" />
-                                                <h3>
-                                                    <a href="https://www.ea-africaexchange.com/sections/harriet-mutoni" title="Harriet Mutoni">Harriet Mutoni</a>
-                                                </h3>
-
-                                            </div>
-                                            <ul>
-                                                <li>
-                                                    Chief HR and Administration	
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                                            
-                                    <div class="col-md-3">
-                                        <div class="our-team-box">
-                                            <div class="team-title">
-                                                <img
-                                                    src="{% static 'resources/pages/herman-kazora.jpg' %}"
-                                                    alt="" />
-                                                <h3>
-                                                    <a href="https://www.ea-africaexchange.com/sections/herman-kazora" title="Herman Kazora">Herman Kazora</a>
-                                                </h3>
-
-                                            </div>
-                                            <ul>
-                                                <li>
-                                                    Head of Quality Control	
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                        
+                                    {% endfor %}
                                 </div>
                             </div>
 

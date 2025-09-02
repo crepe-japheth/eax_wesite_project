@@ -40,171 +40,24 @@
                     <div class="inner-left">
                         <div class="our-team-sec">
                             <div class="row">
-                                                        
+                                {% for partner in partners %}                        
                                 <div class="col-md-3">
                                     <div class="our-team-box">
                                         <div class="team-title">
                                             <img
-                                                src="{% static 'resources/pages/nasdaq-trading.jpg' %}"
+                                                src="{{ partner.logo.url }}"
                                                 alt="" />
                                             <h3>
-                                                <a href="https://www.ea-africaexchange.com/sections/nasdaq-trading" title="Nasdaq Trading">Nasdaq Trading</a>
+                                                <a href="{% url 'partner_detail' partner.id %}" title="Nasdaq Trading">{{partner.name}}</a>
                                             </h3>
 
                                         </div>
                                         <ul>
-                                            <li>
-                                                X-stream Nasdaq trading platform, by Nasdaq OMX										</li>
+                                            <li>{{partner.full_name}}</li>
                                         </ul>
                                     </div>
                                 </div>
-                                
-                                
-                                                        
-                                <div class="col-md-3">
-                                    <div class="our-team-box">
-                                        <div class="team-title">
-                                            <img
-                                                src="{% static 'resources/pages/minagri.jpg' %}"
-                                                alt="" />
-                                            <h3>
-                                                <a href="https://www.ea-africaexchange.com/sections/minagri" title="MINAGRI">MINAGRI</a>
-                                            </h3>
-
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                Rwanda Ministry of Agriculture and Animal Resources										</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                
-                                                        
-                                <div class="col-md-3">
-                                    <div class="our-team-box">
-                                        <div class="team-title">
-                                            <img
-                                                src="{% static 'resources/pages/minicom.jpg' %}"
-                                                alt="" />
-                                            <h3>
-                                                <a href="https://www.ea-africaexchange.com/sections/minicom" title="MINICOM">MINICOM</a>
-                                            </h3>
-
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                Rwanda Ministry of Trade and Industry										</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                
-                                                        
-                                <div class="col-md-3">
-                                    <div class="our-team-box">
-                                        <div class="team-title">
-                                            <img
-                                                src="{% static 'resources/pages/naeb.jpg' %}"
-                                                alt="" />
-                                            <h3>
-                                                <a href="https://www.ea-africaexchange.com/sections/naeb" title="NAEB">NAEB</a>
-                                            </h3>
-
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                National Agricultural Export Development Board, Goverment of Rwanda										</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                
-                                                        
-                                <div class="col-md-3">
-                                    <div class="our-team-box">
-                                        <div class="team-title">
-                                            <img
-                                                src="{% static 'resources/pages/rmb.jpg' %}"
-                                                alt="" />
-                                            <h3>
-                                                <a href="https://www.ea-africaexchange.com/sections/rmb" title="RMB">RMB</a>
-                                            </h3>
-
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                Rwanda Mines, Petroleum and Gas Board, Goverment of Rwanda										</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                
-                                                        
-                                <div class="col-md-3">
-                                    <div class="our-team-box">
-                                        <div class="team-title">
-                                            <img
-                                                src="{% static 'resources/pages/africa-improved-foods.jpg' %}"
-                                                alt="" />
-                                            <h3>
-                                                <a href="https://www.ea-africaexchange.com/sections/africa-improved-foods" title="AIF">AIF</a>
-                                            </h3>
-
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                Africa Improved Foods Rwanda Limited										</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                
-                                                        
-                                <div class="col-md-3">
-                                    <div class="our-team-box">
-                                        <div class="team-title">
-                                            <img
-                                                src="{% static 'resources/pages/minimex.jpg' %}"
-                                                alt="" />
-                                            <h3>
-                                                <a href="https://www.ea-africaexchange.com/sections/minimex" title="MINIMEX">MINIMEX</a>
-                                            </h3>
-
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                Minimex Ltd										</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                
-                                                        
-                                <div class="col-md-3">
-                                    <div class="our-team-box">
-                                        <div class="team-title">
-                                            <img
-                                                src="{% static 'resources/pages/prodev.jpg' %}"
-                                                alt="" />
-                                            <h3>
-                                                <a href="https://www.ea-africaexchange.com/sections/prodev" title="PRODEV RWANDA">PRODEV RWANDA</a>
-                                            </h3>
-
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                ProDev Group Holding Ltd.										</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                
-                                                            
-                                
-                            
-
-
+                                {% endfor %}
                             </div>
                         </div>
 

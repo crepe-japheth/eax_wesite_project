@@ -45,5 +45,9 @@ urlpatterns = [
     path('category/<int:category_id>/', views.NewsView.as_view(), name='blog_by_category'),
     path('blog_detail/<int:pk>/', views.SinglePageView.as_view(), name="blog_detail"),
 
+    # partners and managemnt team detail views
+    path('partner_detail/<int:pk>/', views.PartnerDetailView.as_view(), name="partner_detail"),
+    path('management_detail/<int:pk>/', views.ManagementTeamDetailView.as_view(), name="management_detail"),
+
 
 ]

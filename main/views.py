@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.shortcuts import render, get_object_or_404
-from .models import BlogPost, Category
+from .models import BlogPost, Category, Partner, ManagementTeamMember
 
 class IndexView(TemplateView):
     template_name = "main/index.html"
@@ -22,16 +22,12 @@ class CompanyProfileView(TemplateView):
     template_name = "main/who_are_we/company-profile.html"
 
 
-class ManagementTeamView(TemplateView):
-    template_name = "main/who_are_we/eax-management-team.html"
+
 
 
 class FAQView(TemplateView):
     template_name = "main/who_are_we/faq.html"
 
-
-class PartnersView(TemplateView):
-    template_name = "main/who_are_we/partners.html"
 
 
 # What we do views 
@@ -161,6 +157,25 @@ class SinglePageView(DetailView):
         context = super().get_context_data(**kwargs)
         context["categories"] = Category.objects.all()
         return context
+    
+class PartnersView(ListView):
+    model =  Partner
+    context_object_name = "partners"
+    template_name = "main/who_are_we/partners.html"
+    paginate_by = 10
+
+class PartnerDetailView(DetailView):
+    model = Partner
+    context_object_name = "partner"
+    template_name = "main/partners_detail.html"
 
 
+class ManagementTeamView(ListView):
+    model =  ManagementTeamMember
+    context_object_name = "team_members"
+    template_name = "main/who_are_we/eax-management-team.html"
 
+class ManagementTeamDetailView(DetailView):
+    model = ManagementTeamMember
+    context_object_name = "team_member"
+    template_name = "main/management_team_detail.html"
